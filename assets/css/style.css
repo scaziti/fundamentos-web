@@ -1,6 +1,14 @@
 /*Estilos da página index.html*/
+.background {
+    background-color: rgb(176, 208, 245);
+}
+
 .center {
     text-align: center;
+}
+
+.justify {
+    text-align: justify;
 }
 
 .container {
@@ -36,6 +44,19 @@
 .wh-300 {
     width: 250px;
     height: 250px;
+}
+
+.tm-social {
+    width: 50px;
+    height: 50px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.ml-50 {
+    margin-left: 50px;
 }
 
 
