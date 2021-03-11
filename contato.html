@@ -22,18 +22,18 @@
         <div>
             <form >
                 <label for="nome"> Nome: </label> <br>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
                 <br>
                 <label for="email"> Email: </label> <br>
-                <input type="email" id="email">
-                <br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
                 <br>
                 <label for="assunto"> Assunto: </label> <br>
-                <textarea name="assunto" id="assunto" cols="50" rows="10"></textarea>
+                <textarea name="assunto" id="assunto" cols="50" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
                 <br>
-                <br>
-                <button> Enviar </button>
+                <button onclick="enviar()"> Enviar </button>
             </form>
         </div>
 
@@ -42,13 +42,16 @@
             <p> Av. Francisco Matarazzo, 1705 - Água Branca </p>
             <p> São Paulo - SP </p>
         
-            <iframe 
+            <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1357148285665!2d-46.68066025021608!3d-23.52762068462454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57fd1d715d45%3A0x864e5421d6195cb1!2sAllianz%20Parque!5e0!3m2!1sen!2sbr!4v1615302245193!5m2!1sen!2sbr" 
                 width="400" 
                 height="250" 
                 style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy"
+                onmousemove="mapaZoom()"
+                onmouseout="mapaNormal()"
+                id="mapa"
             ></iframe>
         </div>
     </div>
@@ -69,6 +72,7 @@
         </p>
     </footer>
         
+    <script src="assets/js/script.js"></script>
     
 </body>
 </html>
